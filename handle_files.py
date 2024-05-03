@@ -7,9 +7,10 @@ st.title("The Streamlit ETL App 🗂️ ")
 
 st.caption("""
          With this app you will be able to Extract, Transform and Load Below File Types:
-         \n1.CSV
-         \n2.JSON
-         \n3.XML
+         \n1. CSV
+         \n2. JSON
+         \n3. XML
+         \n4. XLSX
          \nps: You can upload multiple files.""")
 
 uploaded_files = st.file_uploader("Choose a file", accept_multiple_files=True)
@@ -24,6 +25,9 @@ def extract(file_to_extract):
 
     elif file_to_extract.name.split(".")[-1] == 'xml':
          extracted_data = pd.read_xml(file_to_extract)
+
+    elif file_to_extract.name.split(".")[-1] == 'xlsx':
+         extracted_data = pd.read_excel(file_to_extract)
          
     return extracted_data
 
