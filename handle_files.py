@@ -28,7 +28,7 @@ def extract(file_to_extract):
          extracted_data = pd.read_json(file_to_extract, lines=True)
 
     elif file_to_extract.name.split(".")[-1] == 'xml':
-         extracted_data = pd.read_xml(file_to_extract)
+         extracted_data = pd.read_xml(file_to_extract, dtype=str)
 
     elif file_to_extract.name.split(".")[-1] == 'xlsx':
          extracted_data = pd.read_excel(file_to_extract)
