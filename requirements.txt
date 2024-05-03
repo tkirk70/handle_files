@@ -25,7 +25,7 @@ openpyxl==3.0.10
     # via -r requirements.in
 packaging==22.0
     # via matplotlib
-pandas==1.5.2
+pandas==2.2.0
     # via -r requirements.in
 pillow==9.3.0
     # via matplotlib
