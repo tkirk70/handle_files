@@ -1,7 +1,11 @@
 import streamlit as st
 import pandas as pd
 import xml.etree.ElementTree as ET 
-from datetime import datetime 
+from datetime import datetime, date
+
+from datetime import datetime, date 
+today = date.today()
+now = datetime.now().strftime("%Y%m%d%H%M%S")
 
 st.title("The Streamlit ETL App 🗂️ ")
 
@@ -62,5 +66,5 @@ if uploaded_files:
 
     st.download_button(label="Download cleaned data as csv",
                        data=csv,
-                       file_name="cleaned_data.csv",
+                       file_name=f"cleaned_data_{now}.csv",
                        mime="text/csv")
