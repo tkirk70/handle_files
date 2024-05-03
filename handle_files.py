@@ -22,16 +22,16 @@ uploaded_files = st.file_uploader("Choose a file", accept_multiple_files=True)
      
 def extract(file_to_extract):
     if file_to_extract.name.split(".")[-1] == "csv": 
-        extracted_data = pd.read_csv(file_to_extract)
+        extracted_data = pd.read_csv(file_to_extract, dtype=str)
 
     elif file_to_extract.name.split(".")[-1] == 'json':
-         extracted_data = pd.read_json(file_to_extract, lines=True)
+         extracted_data = pd.read_json(file_to_extract, lines=True, dtype=str)
 
     elif file_to_extract.name.split(".")[-1] == 'xml':
          extracted_data = pd.read_xml(file_to_extract, dtype=str)
 
     elif file_to_extract.name.split(".")[-1] == 'xlsx':
-         extracted_data = pd.read_excel(file_to_extract)
+         extracted_data = pd.read_excel(file_to_extract, dtype=str)
          
     return extracted_data
 
