@@ -11,7 +11,8 @@ st.caption("""
          \n2. JSON
          \n3. XML
          \n4. XLSX
-         \n**You can upload multiple files.**""")
+         \n**You can upload multiple files.**
+         \nYou can upload mulitple files.""")
 
 uploaded_files = st.file_uploader("Choose a file", accept_multiple_files=True)
 
