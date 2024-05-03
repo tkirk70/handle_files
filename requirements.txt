@@ -39,5 +39,5 @@ pytz==2022.7
     # via pandas
 six==1.16.0
     # via python-dateutil
-lxml
+lxml==5.2.1
     # via my own guess
