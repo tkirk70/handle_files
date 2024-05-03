@@ -3,7 +3,6 @@ import pandas as pd
 import xml.etree.ElementTree as ET 
 from datetime import datetime, date
 
-from datetime import datetime, date 
 today = date.today()
 now = datetime.now().strftime("%Y%m%d%H%M%S")
 
