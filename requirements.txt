@@ -21,7 +21,7 @@ numpy==1.24.0
     #   contourpy
     #   matplotlib
     #   pandas
-openpyxl==3.0.10
+openpyxl==3.1.0
     # via -r requirements.in
 packaging==22.0
     # via matplotlib
